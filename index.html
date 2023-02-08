@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //     3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+      //    содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+      //    Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+      let employesData = new Array();
+      var newPerson = new Object();
+
+      const person = {
+        name: "Dima",
+        sName: "Melnik",
+        age: "33",
+        occupation: "front-end developer",
+      };
+      employesData[0] = person;
+
+      for (let i = 0; i < 3; i++) {
+        employesData[i] = addPerson;
+      }
+
+      function addPerson() {
+        for (let i = 0; i < 3; i++) {
+          newPerson.name = prompt("Введіть дані нової людини: Name");
+          newPerson.sName = prompt("Введіть дані нової людини: Second Name");
+          newPerson.age = prompt("Введіть дані нової людини: Age");
+          newPerson.occupation = prompt(
+            "Введіть дані нової людини: Occupation"
+          );
+        }
+        addPersonToArray();
+      }
+      addPerson();
+
+      function addPersonToArray() {
+        employesData.push(newPerson);
+      }
+    </script>
+  </body>
+</html>
