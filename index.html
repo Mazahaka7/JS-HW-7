@@ -23,20 +23,19 @@
       var newPerson = new Object();
       function addPerson() {  
           for (let i=0; i<100; i++ ) {
-          let userInput = confirm('Add new employe?');
-          if (userInput == true){
-          newPerson.name = prompt("Введіть дані нової людини: Name");
-          newPerson.sName = prompt("Введіть дані нової людини: Second Name");
-          newPerson.age = prompt("Введіть дані нової людини: Age");
-          newPerson.occupation = prompt(
+            let userInput = confirm('Add new employe?');
+            if (userInput == true){
+            newPerson.name = prompt("Введіть дані нової людини: Name");
+            newPerson.sName = prompt("Введіть дані нової людини: Second Name");
+            newPerson.age = prompt("Введіть дані нової людини: Age");
+            newPerson.occupation = prompt(
             "Введіть дані нової людини: Occupation");
-          } 
-          else {
-            return;
-          };
-          addPersonToArray()
-          }
-        }
+            } 
+            else {
+              return;
+            };
+          } addPersonToArray();
+        };
       
       addPerson();
 
