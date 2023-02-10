@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Debt Form</title>
+  </head>
+  <body>
+    <form action="" class="form">
+      <div class="form__header">
+        <h1>Форма розрахунку платежу</h1>
+      </div>
+      <div class="form__info">
+        <span>ПІБ:</span>
+        <input type="text" id="persondata" />
+      </div>
+      <div class="form__address">
+        <span>Адреса:</span>
+        <input type="text" id="address" />
+      </div>
+      <div class="form__typeOfDebt">
+        <input
+          type="radio"
+          name="toggleTypeOfDebt"
+          checked="checked"
+          id="proprietary"
+          class="form__typeOfDebtInput"
+        />
+        <span>Майнове</span>
+        <input
+          type="radio"
+          name="toggleTypeOfDebt"
+          id="non-proprietary"
+          class="form__typeOfDebtInput"
+        />
+        <span>Немайнове</span>
+      </div>
+      <div class="form__typeOfCreditor hide">
+        <input type="radio" name="toggleTypeOfCreditor" id="person" />
+        <span>Фізична особа</span>
+        <input type="radio" name="toggleTypeOfCreditor" id="company" />
+        <span>Юридична особа</span>
+      </div>
+      <div class="form__debtInput">
+        <span>Cума боргу:</span>
+        <input type="number" class="debt" />
+      </div>
+      <div class="form__commissionOutput">
+        <span>Комісія:</span>
+        <div class="cost"></div>
+      </div>
+      <div class="form__footer">
+        <button class="footer__btn">Сформувати платіж</button>
+        <button class="footer__btn" id="bill" type="button">
+          Сформувати квитанція
+        </button>
+      </div>
+    </form>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

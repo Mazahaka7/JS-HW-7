@@ -1,0 +1,30 @@
+.form{
+    width: 400px;
+    height: 100vh;
+    margin: 20px auto;
+}
+.hide{
+    display: none!important;
+}
+.form>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.form__header,
+.form__footer {
+    background-color: aquamarine;
+    text-align: center;
+    font-size: 10px;  
+}
+.form > .form__header{
+    justify-content: center;
+}
+input[type='text'], input[type = 'number']{
+    width: 250px;
+}
+.form__typeOfCreditor {
+    width: 75%;
+    margin: auto;
+    border-top: 1px solid black;
+}

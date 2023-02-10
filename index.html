@@ -4,44 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Database</title>
   </head>
   <body>
     <script type="text/javascript">
       //     3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
       //    содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
       //    Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
-      
-      // const person = {
-      //   name: "Dima",
-      //   sName: "Melnik",
-      //   age: "33",
-      //   occupation: "front-end developer",
-      // };
-      // employesData[0] = person;
-      let employesData = new Array();
-      var newPerson = new Object();
-      function addPerson() {  
-          for (let i=0; i<100; i++ ) {
-            let userInput = confirm('Add new employe?');
-            if (userInput == true){
-            newPerson.name = prompt("Введіть дані нової людини: Name");
-            newPerson.sName = prompt("Введіть дані нової людини: Second Name");
-            newPerson.age = prompt("Введіть дані нової людини: Age");
-            newPerson.occupation = prompt(
-            "Введіть дані нової людини: Occupation");
-            } 
-            else {
-              return;
-            };
-          } addPersonToArray();
+      const employesData = new Array();
+      for (let i = 0; i < 100; i++) {
+        let userInput = confirm("Add new employe?");
+        if (userInput == false) {
+          break;
+        }
+        var newPerson = new Object();
+        newPerson = {
+          name: prompt("name"),
+          sName: prompt("Second name"),
+          age: +prompt("age"),
+          occupation: prompt("occupation"),
+          show: function () {
+            document.write(
+              `New employe: ${newPerson.name},
+               ${newPerson.sName},
+                age: ${newPerson.age},
+                 position: ${newPerson.occupation} .<br>`
+            );
+          },
         };
-      
-      addPerson();
-
-      function addPersonToArray() { 
-          employesData.push(newPerson);
+        newPerson.show();
+        employesData[i] = newPerson;
       }
+      function showAllEmployes() {
+        var str = "";
+        for (var key in employesData) {
+          str += `<span>${employesData[key].name}, 
+            ${employesData[key].sName}, 
+            age: ${employesData[key].age}, 
+            position: ${employesData[key].occupation} .</span><br>`;
+        }
+        document.write("All employes" + str);
+      }
+      showAllEmployes();
     </script>
   </body>
 </html>
