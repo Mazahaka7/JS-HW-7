@@ -1,0 +1,7 @@
+node_modulus
+.DS_Store
+.svscode
+.idea
+.env
+.psd
+build/
