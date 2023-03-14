@@ -5,3 +5,4 @@ node_modulus
 .env
 .psd
 build/
+.DS_Store
